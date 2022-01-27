@@ -39,6 +39,9 @@ public class Profile {
     // Profile's last modification date 
     private Date lastModDate;
 
+    // User's profile picture
+    private String image;
+
     // Default constructor
     public Profile(){
 
@@ -108,6 +111,14 @@ public class Profile {
         this.lastModDate = lastModDate;
     }
 
+    public String getImage() {
+        return this.image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -116,12 +127,18 @@ public class Profile {
             return false;
         }
         Profile profile = (Profile) o;
-        return Objects.equals(userId, profile.userId) && Objects.equals(name, profile.name) && Objects.equals(description, profile.description) && Objects.equals(status, profile.status) && Objects.equals(initDate, profile.initDate) && Objects.equals(lastModDate, profile.lastModDate);
+        return Objects.equals(userId, profile.userId) 
+            && Objects.equals(name, profile.name) 
+            && Objects.equals(description, profile.description) 
+            && Objects.equals(status, profile.status) 
+            && Objects.equals(initDate, profile.initDate) 
+            && Objects.equals(lastModDate, profile.lastModDate)
+            && Objects.equals(image, profile.image);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userId, name, description, status, initDate, lastModDate);
+        return Objects.hash(userId, name, description, status, initDate, lastModDate, image);
     }
 
 
