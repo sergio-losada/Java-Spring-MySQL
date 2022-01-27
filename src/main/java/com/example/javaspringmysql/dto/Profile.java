@@ -3,14 +3,13 @@ package com.example.javaspringmysql.dto;
 import java.util.Date;
 import java.util.Objects;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 import com.example.javaspringmysql.util.Status;
 import com.fasterxml.jackson.annotation.JsonView;
-
-import javax.persistence.Id;
 
 @Entity
 @Table(name = "profile")
