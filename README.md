@@ -13,11 +13,11 @@ Unit tests have been implemented with Mockito and JUnit5 with WebTestClient, whe
 
 ## DTO DETAIL
 The DTO modeled is a representation of a basic user profile. 
-It can be applied to any social media and has the following attributes available
-- userId
-- name
+It can be applied to any social media and has the following attributes available:
+- userId (user's identificator)
+- name (user's profile name)
 - status (inactive, away, active, online)
-- description
+- description (user's profile description/biography)
 - initDate (Profile's creation date)
 - lastModDate (Profile's last modification date) 
 - image (User's profile picture)
