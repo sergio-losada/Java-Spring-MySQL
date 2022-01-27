@@ -30,13 +30,13 @@ public class MockingProfile {
 
     public static void post(ProfileService profileService) {
         Profile profile = new Profile("id3", "mockingPost3", Status.active);
-        // Return the Api object whenever POST is invoked
+        // Return the Profile object whenever POST is invoked
         Mockito.when(profileService.post(Mockito.any(Profile.class))).thenReturn(profile);
     }
 
     public static void put(ProfileService profileService) {
         Profile profile = new Profile("id4", "mockingPut4", Status.inactive);
-        // Return the Api object whenever PUT is invoked
+        // Return the Profile object whenever PUT is invoked
         Mockito.when(profileService.put(Mockito.any(Profile.class), Mockito.anyString())).thenReturn(profile);
     }
 
@@ -48,7 +48,7 @@ public class MockingProfile {
 
     public static void getByKey(ProfileService profileService) {
         Profile p1 = new Profile("id1", "mockingGetByKey", Status.away);
-        // Return the Api object whenever GETBYKEY is invoked
+        // Return the Profile object whenever GETBYKEY is invoked
         Mockito.when(profileService.getByKey(Mockito.anyString())).thenReturn(Optional.of(p1));
     }
 

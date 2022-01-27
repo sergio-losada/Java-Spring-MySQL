@@ -84,7 +84,7 @@ public class ProfileServiceTest {
     @Test
 	@Order(4)
 	public void test04_delete() {
-		// Testing request (no real API name needed as the object to delete is mocked)
+		// Testing request (no real userId needed as the object to delete is mocked)
 		this.profileService.delete(new String());
 		// Mockito verification that the method was only invoked once (No testing response as the method is void)
 		Mockito.verify(profileService).delete(new String());
@@ -93,7 +93,7 @@ public class ProfileServiceTest {
     @Test
 	@Order(5)
 	public void test05_getByKey() {
-		// Testing request (no real API name needed as the object to retrieve is mocked)
+		// Testing request (no real userId name needed as the object to retrieve is mocked)
 		Optional<Profile> response = this.profileService.getByKey(new String());
 		// Testing response
 		assertTrue(response.isPresent() && !response.isEmpty(), "Response entity must be present");

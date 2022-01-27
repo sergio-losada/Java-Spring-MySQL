@@ -67,7 +67,7 @@ public class ProfileControllerTest {
 	@Test
 	@Order(2)
 	public void test02_put() {
-		// Initialization: Api object to update
+		// Initialization: Profile object to update
 		Profile profile = new Profile("id1", "user1", Status.online);
 		// PUT - WebTestClient
 		this
